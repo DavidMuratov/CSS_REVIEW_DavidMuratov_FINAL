@@ -1,0 +1,174 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+/* 12 grid*/
+.layout{
+  border: 2px solid black
+  display: grid;
+  grid:
+"span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12  " 1fr
+"span6 span6 span6 span6 span6 span6 . . . . . ." 1fr
+". . . . . span3 span3 span3 . . . ." 1fr
+". . . . span1 . . . . . . . " 1fr
+/ 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+gap:5px;
+}
+.span12{grid-area:span12; background-color: #bbb;}
+.span6{grid-area:span6; background-color: #bbb;}
+.span3{grid-area:span3; background-color: #bbb;}
+.span1{grid-area:span1; background-color: #bbb;}
+
+/* 3X3*/
+.layout2{
+  border: 2px solid black;
+  width:99%;
+  height:300px;
+  display:grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap:5px;
+}
+
+.x3{
+  background-color: lavender;
+  border: 2px solid lightblue;
+}
+
+
+/* Holy Grail*/
+.layout3{
+  border: 2px solid black;
+  width:99%;
+  height:300px;
+  display:grid;
+  grid:
+    "header header header" auto
+    "leftSide body rightSide" 1fr
+    "footer footer footer" auto
+   / auto 1fr auto;
+  gap:5px;
+}
+.header{grid-area: header; background-color: #f9bec8;}
+.leftSide{grid-area: leftSide; background-color: #ea536c;}
+.rightSide{grid-area: rightSide; background-color: #b03088;}
+.body{grid-area: body; background-color: #53cbea;}
+.footer{grid-area: footer; background-color: #944250;}
+
+
+/* Sidebar*/
+.layout4{
+ border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "sidebar body1" 1fr
+  / auto 1fr;
+  gap:5px
+}
+.sidebar{ grid-area: sidebar; background-color: #996ac8;}
+.body1{ grid-area: body1; background-color: #bba7d3;}
+
+/* Header Main Footer */
+.layout5{
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header1" auto
+    "main" 1fr
+    "footer1" auto
+    / 1fr;
+    gap:5px;
+  }
+.header1{ grid-area: header1; background-color: green;}
+.main{ grid-area: main; background-color: lightgreen;}
+.footer1{ grid-area: footer1; background-color: darkgreen;}
+
+
+
+/* Infinite Rows */
+.layout6{
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(auto-fit,1fr);
+  gap: 5px;
+}
+.box{
+  border: 1px solid darkblue;
+  background-color: lightblue;
+}
+
+
+/* Infinite Rows with Areas*/
+.layout7{
+  border: 2px solid black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(auto-fit,1fr);
+  gap: 5px;
+}
+.col1Last1{
+  grid-column: 1/-1;
+}
+
+/*Flexbox Row*/
+.layout8{
+  border: 2px solid red;
+  background-color: hotpink;
+  display: flex;
+  gap: 10px;
+}
+
+/* Flexbox wrap*/
+.layout9{
+  width: 100%;
+  border: 2px solid red;
+  background-color: hotpink;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/*Flexbox Fill Space*/
+.layout10{
+ border: 2px solid #00ff7b;
+  background-color: #aceccb;
+  display: flex;
+  gap: 10px;
+}
+.grow1{
+  flex-grow: 1;
+}
+
+/*Flexbox Fill remaining Space*/
+.layout11{
+  border: 2px solid #ff4d00;
+  background-color: #ecacac;
+  display: flex;
+  gap: 10px;
+}
+
+/*Flexbox Fill Separate*/
+.layout12{
+  border: 2px solid #ff00dd;
+  background-color: #ecacdb;
+  display: flex;
+  gap: 10px;
+}
+.marginLeft{
+  margin-left: auto;
+}
+
+
+
+
+
+
+
